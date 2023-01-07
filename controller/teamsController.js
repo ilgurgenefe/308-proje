@@ -8,7 +8,7 @@ const createTeams = async (req,res) => {
         req.files.image.tempFilePath,
         {
             use_filename: true,
-            folder: "team_38",
+            folder: "teams",
         }
     );
     
@@ -110,7 +110,7 @@ const updateTeams = async (req,res) => {
                 req.files.image.tempFilePath,
                 {
                     use_filename: true,
-                    folder: "team_38",
+                    folder: "teams",
                 }
             );
             
