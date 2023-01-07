@@ -1,4 +1,4 @@
-import express from "express"players
+import express from "express"
 import * as teamsController from "../controller/teamsController.js"
 
 
