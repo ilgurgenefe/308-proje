@@ -23,18 +23,18 @@
             <div class="tz-gallery">
                      <div class="row">
 
-                        <% for (Teams of Teams) { %>
+                        <% for (teams of teams) { %>
                         <div class="col-lg-4 col-md-6 ma_bottom30">
                            <div class="lightbox">
-                              <img src="<%= Teams.url %>" alt="<%= Teams.name %>">
+                              <img src="<%= teams.url %>" alt="<%= teams.name %>">
                               <div class="view_main">
                                 <div class="pose">
-                                <a class="read_more" href="/Teams/<%= Teams._id%>"><img src="images/ga.png" alt="#"/></a>
+                                <a class="read_more" href="/teams/<%= teams._id%>"><img src="images/ga.png" alt="#"/></a>
                                 <h3 style = "padding-top:10px; padding-bottom:10px">
-                                 <%= Teams.name %>
+                                 <%= teams.name %>
                               </h3>
                               <p style="padding-top:10px">
-                                 <%= Teams.description %>
+                                 <%= teams.description %>
                               </p>
                               </div>
                               </div>
