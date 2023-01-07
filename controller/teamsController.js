@@ -1,4 +1,4 @@
-import teams from "../models/teamsModel.js";
+import Teams from "../models/teamsModel.js";
 import {v2 as cloudinary} from "cloudinary";
 
 const createTeams = async (req,res) => {
