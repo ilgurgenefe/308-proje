@@ -16,6 +16,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage text_align_center">
+                     <span>06</span>
                      <h2>Teams</h2>
                   </div>
                </div>
@@ -23,10 +24,11 @@
             <div class="tz-gallery">
                      <div class="row">
 
-                        <% for (teams of teams) { %>
+                        <% for (teams of teams){ %>
+
                         <div class="col-lg-4 col-md-6 ma_bottom30">
                            <div class="lightbox">
-                              <img src="<%= teams.url %>" alt="<%= teams.name %>">
+                              <img src="<%= teams.url%>" alt="<%= teams.name%>">
                               <div class="view_main">
                                 <div class="pose">
                                 <a class="read_more" href="/teams/<%= teams._id%>"><img src="images/ga.png" alt="#"/></a>
@@ -34,17 +36,19 @@
                                  <%= teams.name %>
                               </h3>
                               <p style="padding-top:10px">
-                                 <%= teams.description %>
+                                 <%= teams.country %>
                               </p>
+                             
                               </div>
                               </div>
                            </div>
                         </div>
+
                     <% } %>
 
                   </div>
                   <div class="col-md-12">
-
+                    <a class="plus_btn" href="gallery.html">+</a>
                   </div>
                </div>
             </div>
