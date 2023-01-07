@@ -1,4 +1,4 @@
-import Teams from "../models/TeamsModel.js";
+import Teams from "../models/teamsModel.js";
 import { v2 as cloudinary} from "cloudinary";
 import fs from "fs";
 
