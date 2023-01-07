@@ -1,0 +1,250 @@
+<%- include("partials/_header") %>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+     
+      <%- include("partials/_menu") %>
+         <!-- top -->
+      <div class="full_bg bt_fe">
+         <div class="slider_main">
+          <div class="container-fluid">
+            <div class="row d_flex">
+              <div class="col-md-5">
+                <div class="creative">
+                  <h1> <small><small>Fans Football Fedaration</small></small></h1>
+                  <a class="read_more" href="/contact">Contact Us</a>
+                </div>
+              </div>
+              <div class="col-md-7">
+            <!-- carousel code -->
+            <div id="banner1" class="carousel slide">
+               <ol class="carousel-indicators">
+                  <li data-target="#banner1" data-slide-to="0" class="active"></li>
+                  <li data-target="#banner1" data-slide-to="1"></li>
+                  <li data-target="#banner1" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <!-- first slide -->
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="carousel-caption relative">
+                           <div class="row d_flex">
+                              <div class="col-md-12">
+                                 <div class="cemara">
+                                  <figure><img src="images/player_img.jpg" alt="#"/></figure>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- second slide -->
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="carousel-caption relative">
+                           <div class="row d_flex">
+                             <div class="col-md-12">
+                                 <div class="cemara">
+                                  <figure><img src="images/player_img.jpg" alt="#"/></figure>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- third slide-->
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="carousel-caption relative">
+                           <div class="row d_flex">
+                             <div class="col-md-12">
+                                  <div class="cemara">
+                                  <figure><img src="images/player_img.jpg" alt="#"/></figure>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- controls -->
+               <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+               <i class="fa fa-arrow-left" aria-hidden="true"></i>
+               <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+               <i class="fa fa-arrow-right" aria-hidden="true"></i>
+               <span class="sr-only">Next</span>
+               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+         </div>
+      </div>
+   </div>
+      <!-- end banner -->
+      <!-- gallery -->
+      <div class="gallery">
+         <div class="container_with">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <span>01</span>
+                     <h2>Recent News</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="tz-gallery">
+                     <div class="row">
+
+
+                        <% for (news of news) { %>
+                        <div class="col-lg-4 col-md-6 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="<%= news.url %>" alt="<%= news.name %>">
+                              <div class="view_main">
+                                <div class="pose">
+                                <a class="read_more" href="<%= news.url %>"><img src="images/ga.png" alt="#"/></a>
+                                <p><%= news.description %></p>
+                              </div>
+                              </div>
+                           </div>
+                        </div>
+                        <% } %>
+                        
+                  </div>
+                  <div class="col-md-12">
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end gallery -->
+      <!-- about -->
+      <div class="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="titlepage text_align_left">
+                <span>02</span>
+                <h2>About Us</h2>
+                <p>Founded on April 23, 1923; TFF is the authorized institution to carry out football activities in Turkey, to ensure the development and spread of football throughout the country, to make all kinds of regulations, to take decisions and to implement them.</p>
+                <a class="read_more" href="about.html">Read More</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="about_img">
+                <figure><img src="images/tff.jpg" alt="#"/></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end about -->
+      <!-- team -->
+      <div class="team">
+         <div class="container_with">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                    <span>03</span>
+                     <h2>TFF ORGANS</h2>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="team_box text_align_center">
+                     <div class="team_img">
+                       <figure><img src="images/general_assembly.jpg" alt="#"/></figure>
+                     </div>
+                     <div class="craig">
+                       <h3>GENERAL ASSEMBLY</h3>
+                       <span style="text-align: justify;">
+                     <small>
+                        <small>
+                           The General Assembly is the authoritative decision-making body of the TFF. All decisions concerning TFF, are taken by a duly convened General Assembly.
+
+                        </small>
+                     </small>
+                     
+                     </span>
+
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="team_box text_align_center">
+                     <div class="team_img">
+                       <figure><img src="images/administrative_body.jfif" alt="#"/></figure>
+                     </div>
+                     <div class="craig">
+                       <h3>ADMINISTRATIVE BODY</h3>
+                       <span style="text-align: justify;">
+                     <small>
+                        <small>
+                           Administrative body is the body responsible for the distribution of duties within the TFF, ensuring the execution of the decisions of the general assembly and supervising the operations of other TFF committees.
+                        </small>
+                     </small>
+                     </span>
+
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="team_box text_align_center">
+                     <div class="team_img">
+                       <figure><img src="images/supervisory_body.jfif" alt="#"/></figure>
+                     </div>
+                     <div class="craig">
+                       <h3>SUPERVISORY BOARD</h3>
+                       <span style="text-align: justify;"> <small>
+                        <small>
+                           The Supervisory Board audits the financial transactions of the Federation on behalf of the General Assembly in accordance with the instruction prepared by the Administrative Body and accepted by the General Assembly. It submits the annual audit report to be prepared every year for the approval of the General Assembly.
+                        </small>
+                        
+                       </span>
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end team -->
+      <!--  customers -->
+      <div class="customers">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="titlepage text_align_center">
+                <span>04</span>
+                <h2>Why Prime Membership?</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="satteb text_align_center">
+                <p> With the prime mebersjip you will see no adds when you enter the site, besides you can evaluate every referes after the matches, so that have a power to determine next matches' referees</p>
+                <h3>The point of using </h3>
+                <i> 
+                  <img src="images/indir.png" alt="#"/></i>
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end customers  -->
+      
+      <!-- end contact -->
+      <%- include("partials/_footer") %>
+      <!-- end footer -->
+ 

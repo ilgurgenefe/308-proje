@@ -1,0 +1,100 @@
+<%- include("partials/_header") %>
+   <!-- body -->
+   <body class="main-layout inner_page">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="/images/loading.gif" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+     
+      <%- include("partials/_menu") %>
+
+            <!--  customers -->
+            <div class="customers">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="titlepage text_align_center">
+                        <h2>Dashboard page of <%= user.username %></h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="satteb text_align_center">
+                        <p> With the prime mebersjip you will see no adds when you enter the site, besides you can evaluate every referes after the matches, so that have a power to determine next matches' referees</p>
+                        <h3>The point of using </h3>
+                        <i> 
+                          <img src="/images/indir.png" alt="#"/></i>
+        
+                          
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+              <!-- end customers  -->
+
+              <div class= "container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="text_align_center">
+
+                        <% if (!inFollowers) { %>
+                        <a style="margin:20px auto;" class="read-more" href="/user/<%= user._id %>/follow?_method=PUT">Follow</a>
+                           <% } else { %>
+                           <a style="margin:20px auto;" class="read-more" href="/user/<%= user._id %>/unfollow?_method=PUT">Unfollow</a>
+                           <% } %>
+                     </div>
+                  </div>
+               </div>
+              </div>
+
+              <div class="gallery">
+                <div class="container_with">
+                   <div class="row">
+                      <div class="col-md-12">
+                         <div class="titlepage text_align_center">
+
+                            <h2>News which were added by this user</h2>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="tz-gallery">
+                            <div class="row">
+       
+                               <% for (news of news) { %>
+       
+                               <div class="col-lg-4 col-md-6 ma_bottom30">
+                                  <div class="lightbox">
+                                     <img src="<%= news.url%>" alt="<%= news.name%>">
+                                     <div class="view_main">
+                                       <div class="pose">
+                                       <a class="read_more" href="/news/<%= news._id%>"><img src="/images/ga.png" alt="#"/></a>
+                                       <h3 style = "padding-top:10px; padding-buttom:10px">
+                                        <%= news.name %>
+                                     </h3>
+                                     <p style="padding-top:10px">
+                                        <%= news.description %>
+                                     </p>
+                                     </div>
+                                     </div>
+                                  </div>
+                               </div>
+       
+                           <% } %>
+       
+                         </div>
+
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+
+
+      <!-- end footer -->
+      <%- include("partials/_footer") %>
