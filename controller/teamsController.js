@@ -4,7 +4,7 @@ import {v2 as cloudinary} from "cloudinary";
 const createTeams = async (req,res) => {
     
     try {
-        const teams = await teams.create(req.body)
+        const teams = await Teams.create(req.body)
         res.status(201).json({
             succeded: true,
             teams,
@@ -21,7 +21,7 @@ const createTeams = async (req,res) => {
 const getAllTeams = async (req,res) => {
     
     try {
-        const teams = await teams.find({})
+        const teams = await Teams.find({})
         res.status(200).render("teams",  {
             teams,
             link: "teams",
@@ -38,7 +38,7 @@ const getAllTeams = async (req,res) => {
 const getATeams = async (req,res) => {
     
     try {
-        const a_teams = await teams.findById ({_id: req.params.id})
+        const a_teams = await Teams.findById ({_id: req.params.id})
         res.status(200).render("a_teams",  {
             a_teams,
             link: "teams",
