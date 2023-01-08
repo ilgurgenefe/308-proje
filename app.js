@@ -1,6 +1,7 @@
 import express from "express"
 import dotenv from "dotenv"
 import conn from "./db.js"
+import require from "requirejs"
 import cookieParser from "cookie-parser";
 import methodOverride from "method-override";
 import pageRoute from "./routes/pageRoute.js"
@@ -50,6 +51,34 @@ app.use('/user', userRoute);
 app.use('/teams', teamsRoute);
 app.use('/referees',refereesRoute);
 app.use('/players', playersRoute);
+
+var http = require("https");
+
+var options = {
+  "method": "GET",
+  "hostname": "api.collectapi.com",
+  "port": null,
+  "path": "/football/results?data.league=super-lig",
+  "headers": {
+    "content-type": "application/json",
+    "authorization": "apikey 32sRUqY3rmiqQBnl8rnOTi:3l6wBeO2SZmJsmcOc68idF"
+  }
+};
+
+var req = http.request(options, function (res) {
+  var chunks = [];
+
+  res.on("data", function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on("end", function () {
+    var body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+});
+
+req.end();
 
 app.listen (port, ()=> {
     console.log(`running on: ${port}`);
